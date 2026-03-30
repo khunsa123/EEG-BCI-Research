@@ -1,5 +1,6 @@
 #EEG Schizophrenia Classification
-# Version 1- Simple
+# Version 2- Improved
+
 # =========================================================
 # 1. INSTALL + IMPORTS
 # =========================================================
@@ -157,4 +158,5 @@ print("Best Params:", gscv.best_params_)
 #Data Set Link: https://repod.icm.edu.pl/dataset.xhtml?persistentId=doi:10.18150/repod.0107441
 
 #Summary:
+
 #Version 2 — Method Summary (1 paragraph, first‑person, direct tone) In Version 2, I implemented a cleaner and more robust EEG classification pipeline on the same RepOD schizophrenia dataset by fixing data handling issues and significantly improving feature extraction. I carefully sorted EDF files numerically to maintain correct subject ordering, explicitly separated healthy controls and patients, and applied consistent EEG preprocessing using MNE, including average re-referencing, 0.5–45 Hz band‑pass filtering, and overlapping 5‑second epochs. Instead of inefficient per‑epoch loops, I extracted features in a fully vectorized manner, combining statistical time‑domain features (mean, standard deviation, variance, peak‑to‑peak, skewness, kurtosis), physiologically meaningful frequency‑domain band power features (delta, theta, alpha, beta, gamma using Welch PSD), and spectral entropy to capture signal complexity. These features were concatenated into a single feature matrix of 228 dimensions per epoch. For classification, I used a standardized Logistic Regression model with increased iterations for stability and performed subject‑wise cross‑validation using GroupKFold to prevent data leakage, tuning the regularization parameter via GridSearchCV. This improved pipeline achieved a higher cross‑validated accuracy of ~68.9%, demonstrating that adding EEG‑specific spectral and entropy features led to better discrimination between schizophrenia patients and healthy controls compared to Version 1.
