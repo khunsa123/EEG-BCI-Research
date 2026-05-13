@@ -50,22 +50,39 @@ This project fits naturally into the **Multimodal‑NeuroPhysio‑Signal‑Resea
 ## 📂 Project Structure
 
 XP2_EEG_fMRI_Neurofeedback/
+
 │
+
 ├── notebooks/
+
 │   ├── 01_load_and_preprocess_EEG.ipynb
+
 │   ├── 02_NF_score_analysis.ipynb
+
 │   ├── 03_fMRI_activation_analysis.ipynb
+
 │   ├── 04_multimodal_ML_classification.ipynb
+
 │
+
 ├── src/
+
 │   ├── eeg_preprocessing.py
+
 │   ├── nf_features.py
+
 │   ├── fmri_processing.py
+
 │   ├── multimodal_ml.py
+
 │   ├── visualization.py
+
 │
+
 ├── data/                     # downloaded manually or via script
+
 ├── README.md
+
 └── requirements.txt
 
 ---
@@ -115,32 +132,42 @@ XP2_EEG_fMRI_Neurofeedback/
 
 ```python
 !pip install mne scipy numpy matplotlib scikit-learn h5py
-
+```
+```bash
 Upload XP2 data to Colab or mount Google Drive
 from google.colab import drive
 drive.mount('/content/drive')
+```
+---
 
-📊 Expected Results
-Clear ERD/ERS patterns during MI
+## 📊 Expected Results
 
-Strong NF learning curves in 1D vs 2D groups
+- Clear ERD/ERS patterns during MI
 
-EEG NF correlates with fMRI NF
+- Strong NF learning curves in 1D vs 2D groups
 
-ML models classify MI vs Rest with 80–90% accuracy
+- EEG NF correlates with fMRI NF
 
-Multimodal EEG+fMRI improves NF prediction
+- ML models classify MI vs Rest with 80–90% accuracy
 
-📝 Notes
-XP2 is a multimodal dataset requiring careful synchronization
+- Multimodal EEG+fMRI improves NF prediction
 
-Preprocessed EEG is recommended for ML tasks
+---
 
-fMRI NF scores are already extracted (no heavy fMRI processing needed)
+## 📝 Notes
 
-This project demonstrates multimodal integration, ideal for neurofeedback research
+- XP2 is a multimodal dataset requiring careful synchronization
 
-👩‍🔬 Author
+- Preprocessed EEG is recommended for ML tasks
+
+- fMRI NF scores are already extracted (no heavy fMRI processing needed)
+
+- This project demonstrates multimodal integration, ideal for neurofeedback research
+
+---
+
+## 👩‍🔬 Author
+
 Khunsa Iftikhar  
 Computational Neuroscience & AI Researcher
 Multimodal Neurophysiology & Machine Learning
