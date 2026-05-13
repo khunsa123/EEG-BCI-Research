@@ -34,22 +34,36 @@ Each recording includes:
 ## 📂 Project Structure
 
 Somatosensory_Pain_iEEG/
-│
-├── notebooks/
-│   ├── 01_download_and_preprocess.ipynb
-│   ├── 02_erp_and_timefreq_analysis.ipynb
-│   ├── 03_ml_classification.ipynb
-│
-├── src/
-│   ├── preprocessing.py
-│   ├── feature_extraction.py
-│   ├── ml_models.py
-│   ├── visualization.py
-│
-├── data/                 # downloaded automatically (ignored by git)
-├── README.md
-└── requirements.txt
 
+│
+
+├── notebooks/
+
+│   ├── 01_download_and_preprocess.ipynb
+
+│   ├── 02_erp_and_timefreq_analysis.ipynb
+
+│   ├── 03_ml_classification.ipynb
+
+│
+
+├── src/
+
+│   ├── preprocessing.py
+
+│   ├── feature_extraction.py
+
+│   ├── ml_models.py
+
+│   ├── visualization.py
+
+│
+
+├── data/                 # downloaded automatically (ignored by git)
+
+├── README.md
+
+└── requirements.txt
 
 ---
 
@@ -100,36 +114,47 @@ Somatosensory_Pain_iEEG/
 
 ```python
 !pip install mne openneuro-py numpy scipy matplotlib scikit-learn
+```
 
-Download dataset (one subject only)
+### Download dataset (one subject only)
 
+```bash
 from openneuro import download
-
 download(
     dataset="ds002778",
     target_dir="/content/ds002778",
     include=["sub-01"]
 )
+```
+---
 
-📊 Expected Results
-Clear somatosensory evoked responses
+## 📊 Expected Results
 
-Strong high‑gamma activation during painful stimuli
+- Clear somatosensory evoked responses
 
-ML classifier accuracy typically 75–90%
+- Strong high‑gamma activation during painful stimuli
 
-Distinct cortical signatures of nociceptive processing
+- ML classifier accuracy typically 75–90%
 
-📝 Notes
-iEEG/ECoG provides high‑spatial‑resolution pain biomarkers
+- Distinct cortical signatures of nociceptive processing
 
-Dataset is small enough for Colab
+---
 
-Perfect complement to laser‑evoked EEG (ds002338)
+## 📝 Notes
 
-Strengthens multimodal pain‑neurophysiology research portfolio
+- iEEG/ECoG provides high‑spatial‑resolution pain biomarkers
 
-👩‍🔬 Author
+- Dataset is small enough for Colab
+
+- Perfect complement to laser‑evoked EEG (ds002338)
+
+- Strengthens multimodal pain‑neurophysiology research portfolio
+
+---
+
+## 👩‍🔬 Author
+
 Khunsa Iftikhar  
 Computational Neuroscience & AI Researcher
+
 Multimodal Neurophysiology & Machine Learning
